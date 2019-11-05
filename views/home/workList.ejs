@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Work List</title>
+</head>
+<body>
+	<h1>Work List</h1>
+	
+	<a href="/home_manager">Back</a> | 
+	 
+
+	<br>
+	<br>
+
+	<table border="1">
+		<tr>
+			
+			<td>CustomerId</td>
+			<td>EmployeeId</td>
+			<td>Work Details</td>
+			<td>Payment Status</td>
+			
+		</tr>
+
+		<% for(var i=0; i < worklist.length; i++){ %>
+
+		<tr>
+			<td><%= worklist[i].customer_id %></td>
+			<td><%= worklist[i].employee_id %></td>
+			<td><%= worklist[i].work %></td>
+			<% if(worklist[i].payment) { %>
+				<td>paid</td>
+			<% } else { %>
+				<td>unpaid</td>
+			<%  }%>			
+		</tr>
+
+		<% } %>
+	</table>
+	<a href="/logout">Logout</a> 
+
+</body>
+</html>

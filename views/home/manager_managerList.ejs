@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Manager List</title>
+</head>
+<body>
+	<h1>Manager List</h1>
+	
+	<a href="/home_manager">Back</a> | 
+	 
+
+	<br>
+	<br>
+
+	<table border="1">
+		<tr>
+			<td>ID</td>
+			<td>Username</td>
+			<td>Password</td>
+			
+		</tr>
+
+		<% for(var i=0; i < managerList.length; i++){ %>
+
+		<tr>
+			<td><%= managerList[i].id %></td>
+			<td><%= managerList[i].username %></td>
+			<td><%= managerList[i].password %></td>
+			
+		</tr>
+
+		<% } %>
+	</table>
+	<a href="/logout">Logout</a> 
+
+</body>
+</html>

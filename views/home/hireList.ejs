@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>User List</title>
+</head>
+<body>
+	<h1>User List</h1>
+	
+	<a href="/home">Back</a> | 
+	 
+
+	<br>
+	<br>
+
+	<table border="1">
+		<tr>
+			<td>Customer ID</td>
+			<td>Customer Username</td>
+			<td>Employee name</td>
+			<td>Customer name</td>
+			
+		</tr>
+
+		<% for(var i=0; i < userList.length; i++){ %>
+
+		<tr>
+			<td><%= userList[i].customerId %></td>
+			<td><%= userList[i].username %></td>
+			<td><%= userList[i].id %></td>
+			<td><%= userList[i].name %></td>
+			
+
+
+		</tr>
+
+		<% } %>
+	</table>
+	<a href="/logout">Logout</a> 
+
+</body>
+</html>
